@@ -47,9 +47,9 @@ public class MantainanceServices {
 
     
     @PUT
-    @Path("InsertResource")
+    @Path("CreateResource")
     @Consumes("application/x-www-form-urlencoded")
-    public Response putJsonResource(
+    public Response createResource(
             @FormParam ("Admin")String admin,
             @FormParam ("Password")String password,
             @FormParam ("ResourceName")String name,
@@ -104,20 +104,5 @@ public class MantainanceServices {
         rb.expires(new Date());
         return rb.build();
     } 
-    /*@PUT
-    @Path("InsertUser")
-    @Consumes("application/x-www-form-urlencoded")
-    public Response putJsonUser(
-            @FormParam ("Admin")String admin,
-            @FormParam ("Password")String password,
-            @FormParam ("UserName")String userName,
-            @FormParam ("UserPassword") String userPassword,
-            @FormParam ("UserID") int userID
-            ) 
-    {
-        System.out.println("Inserto usuario: "+userName+" - "+ userPassword+" - "+ userID);
-        ResponseBuilder rb = Response.ok();
-        rb.expires(new Date());
-        return rb.build();
-    }*/
+    
 }
